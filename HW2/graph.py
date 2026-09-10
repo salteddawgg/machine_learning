@@ -22,6 +22,10 @@ values = [
 ]
 #these numbers were calculatet form frequency(letters).py
 
+order = np.argsort(values)
+catagories = np.array(categories)[order]
+values = np.array(values)[order]
+
 plt.bar(categories, values, color="blue", width=0.5)
 plt.xlabel("letters")
 plt.ylabel("frequency")
@@ -39,6 +43,9 @@ board = np.array([
 	[0, 1, 0, 1, 0, 1, 0, 1],
 	[1, 0, 1, 0, 1, 0, 1, 0],
 ])
+
+#board = np.arrange(64).reshape((8,8))
+# print(board)
 
 plt.imshow(board, cmap="binary", origin="lower", interpolation="nearest")
 plt.xticks(range(8), list("ABCDEFGH"))
