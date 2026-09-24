@@ -7,7 +7,7 @@ class NaiveBayes:
         self.X = X
         
     def predict(self, x):
-        labels np.unique(self.y)
+        labels = np.unique(self.y)
         probs = [self.pr_y_given_x(y,x) for y in labels]
         return np.argmax(probs)
               
@@ -35,3 +35,4 @@ if __name__ == '__main__':
     preds = [model.predict(x) for x in X_]
     accuracy = np.sum(preds == y_) / y_.shape[0]
     print(f'Accuracy: {accuracy}')
+    print(modle.predict(np.array([1, 0, 30, 19])))

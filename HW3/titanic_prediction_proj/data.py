@@ -4,7 +4,7 @@ import numpy as np
 keep = [0,     3,  4,  8]
 keep += [1] # keeping labels
 encoding = {'female': 0, 'male': 1, 'C': 0, 'Q': 1, 'S': 2}
-data = np.loadtxt('HW3\titanic_prediction_proj\titanic.csv', skiprows=1, delimiter=',', dtype=object)
+data = np.loadtxt('HW3\ titanic_prediction_proj\ titanic.csv', skiprows=1, delimiter=',', dtype=object)
 data = np.vstack([data[:, j] for j in keep]).T
 data = data[np.sum(data == '', axis=1) == 0]  # removing rows with empty values
 for k in encoding:
