@@ -22,9 +22,10 @@ class NaiveBayes:
             
     
     def pr_xi_given_y(self, xi, i, y):
-        filtered = self.x[self.y == y]
+        filtered = self.X[self.y == y]
         count = np.sum(filtered[:, i] == xi)
-        pr = count /filtered.shape[0]
+        pr = count / filtered.shape[0]
+        
         return pr if pr > 0 else 2**(-32)
         
     def pr_y(self, y):
@@ -35,4 +36,4 @@ if __name__ == '__main__':
     preds = [model.predict(x) for x in X_]
     accuracy = np.sum(preds == y_) / y_.shape[0]
     print(f'Accuracy: {accuracy}')
-    print(modle.predict(np.array([1, 0, 30, 19])))
+    print(model.predict(np.array([2, 1, 22, 18])))
