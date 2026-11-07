@@ -98,7 +98,7 @@ data = np.loadtxt(
 Xy = np.column_stack((data[:, 12], data[:,5], np.ones(data.shape[0])))
 print(Xy.shape)
 print(Xy)
-#test = 
-#train = 
+test = 
+train = 
 #X, y =
 #_X, _y =  
